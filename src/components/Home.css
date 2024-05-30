@@ -1,0 +1,81 @@
+/* src/components/Home.css */
+.info-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .corner-images {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .corner-image {
+    width: 100px;
+    height: 100px;
+    z-index: -10; /* 背面に表示 */
+  }
+  
+  .hospital img, .school img, .family img, .meeting img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .part2, .part3, .part4, .part5 {
+    margin-bottom: 100vh; /* 各パートの下に100vhの間隔を追加 */
+    margin-top: 100vh;    /* 各パートの上に100vhの間隔を追加 */
+  }
+  
+  .part1 {
+    margin-top: 30vh; /* ヘッダーのすぐ下に配置 */
+    margin-bottom: 0; /* 次のパートまでの間隔を無くす */
+  }
+  
+  .part6 {
+    margin-top: 0; /* 前のパートからの間隔を無くす */
+    margin-bottom: 30vh; /* フッターのすぐ上に配置 */
+  }
+  
+  .part2 img, .part4 img {
+    display: block;
+    margin: 10px auto;
+    width: 100px; /* 画像の幅を調整 */
+    height: auto; /* 自動で高さを調整 */
+  }
+  
+  /* メディアクエリを追加して、画面サイズに応じて調整 */
+  @media (max-width: 1200px) {
+    .corner-image {
+      width: 8%;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .corner-image {
+      width: 10%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .corner-image {
+      width: 12%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .corner-image {
+      width: 14%;
+    }
+  }
+  
