@@ -1,16 +1,40 @@
-// src/components/Header.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import './Header.css'; // 必要に応じてCSSをインポート
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const handleMouseMove = (event) => {
+    if (event.clientY <= 20) {
+      setIsHeaderVisible(true);
+    } else if (window.scrollY > 0) {
+      setIsHeaderVisible(false);
+    }
+  };
+
+  const handleScroll = () => {
+    if (window.scrollY === 0) {
+      setIsHeaderVisible(true);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('scroll', handleScroll);
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header style={styles.header}>
+    <header className={`header ${isHeaderVisible ? 'visible' : ''}`}>
       <h1 style={styles.title}>Olive</h1>
       <div style={styles.menuIcon} onClick={toggleMenu}>
         &#9776;
@@ -33,17 +57,6 @@ function Header() {
 }
 
 const styles = {
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '10px 20px',
-    background: '#333',
-    color: '#fff',
-    position: 'relative',
-    overflow: 'hidden',
-    height: '60px',
-  },
   title: {
     margin: 0,
   },

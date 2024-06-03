@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Information.css';
 
 function Information() {
@@ -11,6 +11,19 @@ function Information() {
       setSelectedText(text); // 違うテキストをクリックした場合に表示
     }
   };
+
+  const handleDocumentClick = (event) => {
+    if (!event.target.closest('.comment') && !event.target.closest('.center-text')) {
+      setSelectedText('');
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleDocumentClick);
+    return () => {
+      document.removeEventListener('click', handleDocumentClick);
+    };
+  }, []);
 
   return (
     <div className="info-container">
