@@ -1,4 +1,3 @@
-/* src/components/Home.css */
 body, html {
   margin: 0;
   padding: 0;
@@ -12,96 +11,113 @@ body, html {
 main {
   flex: 1;
   padding: 20px;
-}
-
-.corner-images {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 10;
-  opacity: 0; /* 初期状態では非表示 */
-  transition: opacity 0.5s ease; /* 透明度の遷移を追加 */
-}
-
-.corner-images.visible {
-  opacity: 1; /* visibleクラスが付いたら表示 */
-}
-
-.corner-image {
-  position: absolute;
-  width: 250px;
-  height: 250px;
-}
-
-.hospital {
-  top: 50px;  /* 上から50pxに調整 */
-  left: 50px; /* 左から50pxに調整 */
-}
-
-.school {
-  top: 50px;  /* 上から50pxに調整 */
-  right: 50px; /* 右から50pxに調整 */
-}
-
-.family {
-  bottom: 100px;  /* 下から100pxに調整 */
-  left: 50px;    /* 左から50pxに調整 */
-}
-
-.meeting {
-  bottom: 100px;  /* 下から100pxに調整 */
-  right: 50px;   /* 右から50pxに調整 */
-}
-
-.corner-image img {
-  width: 100%;
-  height: 100%;
-}
-
-.part2, .part3, .part4, .part5 {
-  margin-bottom: 100vh;
-  margin-top: 100vh;
+  position: relative;
 }
 
 .part1 {
-  margin-top: 30vh;
-  margin-bottom: 0;
+  position: relative;
+  height: 50vh; /* part1の高さを50vhに設定 */
 }
 
-.part6 {
-  margin-top: 0;
-  margin-bottom: 30vh;
+.part2 {
+  position: relative;
+  height: 75vh; /* part2の高さを75vhに設定 */
 }
 
-.part2 img, .part4 img {
-  display: block;
-  margin: 10px auto;
-  width: 100px;
-  height: auto;
+.part3, .part4, .part5, .part6 {
+  position: relative;
+  height: 100vh; /* デフォルトの高さを100vhに設定 */
 }
 
-.language-switch {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer; /* language-switch全体にカーソルを適用 */
+.hospital img, .school img, .family img, .meeting img {
+  position: absolute; /* 位置を絶対指定に変更 */
 }
 
-.language-switch span {
-  font-size: 10pt;
-  margin-top: 5px;
+.part3 .hospital img {
+  top: 50px;
+  left: 50px;
+}
+
+.part3 .school img {
+  top: 50px;
+  right: 50px;
+}
+
+.part3 .family img {
+  bottom: 50px;
+  left: 50px;
+}
+
+.part3 .meeting img {
+  bottom: 50px;
+  right: 50px;
+}
+
+.part4 .hospital img {
+  top: 50px;
+  left: 50px;
+}
+
+.part4 .school img {
+  top: 50px;
+  right: 50px;
+}
+
+.part4 .family img {
+  bottom: 50px;
+  left: 50px;
+}
+
+.part4 .meeting img {
+  bottom: 50px;
+  right: 50px;
+}
+
+.part5 .hospital img {
+  top: 50px;
+  left: 50px;
+}
+
+.part5 .school img {
+  top: 50px;
+  right: 50px;
+}
+
+.part5 .family img {
+  bottom: 50px;
+  left: 50px;
+}
+
+.part5 .meeting img {
+  bottom: 50px;
+  right: 50px;
+}
+
+.part6 .hospital img {
+  top: 50px;
+  left: 50px;
+}
+
+.part6 .school img {
+  top: 50px;
+  right: 50px;
+}
+
+.part6 .family img {
+  bottom: 50px;
+  left: 50px;
+}
+
+.part6 .meeting img {
+  bottom: 50px;
+  right: 50px;
 }
 
 .language-menu {
+  text-align: center;
+  background-color: aliceblue;
+  background-size: 30% 100%;
   position: absolute;
-  background: white;
-  border: 1px solid #ddd;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 100; /* メニューを前面に表示 */
 }
 
 .language-menu ul {
@@ -112,35 +128,14 @@ main {
 
 .language-menu li {
   margin: 5px 0;
-  cursor: pointer;
 }
 
-/* language.svgのカーソルを手のアイコンに変更 */
-.part1 img[src='/language.svg'] {
-  cursor: pointer;
+.language-switch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* メディアクエリを追加して、画面サイズに応じて調整 */
-@media (max-width: 1200px) {
-  .corner-image {
-    width: 8%;
-  }
-}
-
-@media (max-width: 992px) {
-  .corner-image {
-    width: 10%;
-  }
-}
-
-@media (max-width: 768px) {
-  .corner-image {
-    width: 12%;
-  }
-}
-
-@media (max-width: 576px) {
-  .corner-image {
-    width: 14%;
-  }
+.language-switch img {
+  margin-bottom: 5px;
 }

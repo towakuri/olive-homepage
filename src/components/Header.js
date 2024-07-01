@@ -1,105 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'; // 必要に応じてCSSをインポート
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const handleMouseMove = (event) => {
-    if (event.clientY <= 20) {
-      setIsHeaderVisible(true);
-    } else if (window.scrollY > 0) {
-      setIsHeaderVisible(false);
-    }
-  };
-
-  const handleScroll = () => {
-    if (window.scrollY === 0) {
-      setIsHeaderVisible(true);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('scroll', handleScroll);
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
-    <header className={`header ${isHeaderVisible ? 'visible' : ''}`}>
-      <h1 style={styles.title}>Olive</h1>
-      <div style={styles.menuIcon} onClick={toggleMenu}>
+    <header className="header">
+      <h1>Olive</h1>
+      <div className="menuIcon" onClick={toggleMenu}>
         &#9776;
       </div>
-      <nav style={{ ...styles.nav, right: menuOpen ? '0' : '-300px' }}>
-        <div style={styles.closeIcon} onClick={toggleMenu}>
+      <nav style={{ right: menuOpen ? '0' : '-300px' }}>
+        <div className="closeIcon" onClick={toggleMenu}>
           &times;
         </div>
-        <ul style={styles.navList}>
-          <li style={styles.navItem}>
-            <Link to="/" onClick={toggleMenu} style={styles.navLink}>Home</Link>
+        <ul>
+          <li>
+            <Link to="/" onClick={toggleMenu}>Home</Link>
           </li>
-          <li style={styles.navItem}>
-            <Link to="/information" onClick={toggleMenu} style={styles.navLink}>Information</Link>
+          <li>
+            <Link to="/information" onClick={toggleMenu}>Information</Link>
           </li>
         </ul>
       </nav>
     </header>
   );
 }
-
-const styles = {
-  title: {
-    margin: 0,
-  },
-  menuIcon: {
-    cursor: 'pointer',
-    fontSize: '24px',
-  },
-  nav: {
-    position: 'absolute',
-    top: '0',
-    right: '-300px',
-    height: '100%',
-    background: '#fff',
-    color: '#333',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    transition: 'right 0.3s ease-in-out',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '300px',
-  },
-  closeIcon: {
-    position: 'absolute',
-    top: '10px',
-    right: '10px',
-    cursor: 'pointer',
-    fontSize: '24px',
-  },
-  navList: {
-    listStyle: 'none',
-    padding: '10px',
-    margin: 0,
-    textAlign: 'center',
-  },
-  navItem: {
-    padding: '10px 0',
-    width: '100%',
-  },
-  navLink: {
-    textDecoration: 'none',
-    color: '#333',
-  },
-};
 
 export default Header;
