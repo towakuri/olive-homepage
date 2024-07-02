@@ -12,11 +12,13 @@ main {
   flex: 1;
   padding: 20px;
   position: relative;
+  padding-top: 80px !important;
 }
 
 .part1 {
   position: relative;
-  height: 50vh; /* part1の高さを50vhに設定 */
+  transform: translateY(200px); /* ここを大きな値に変更して下に移動 */
+  height: 100vh; /* part1の高さを50vhに設定 */
 }
 
 .part2 {
@@ -27,88 +29,93 @@ main {
 .part3, .part4, .part5, .part6 {
   position: relative;
   height: 100vh; /* デフォルトの高さを100vhに設定 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.hospital img, .school img, .family img, .meeting img {
-  position: absolute; /* 位置を絶対指定に変更 */
+.hospital, .school, .family, .meeting {
+  position: absolute;
 }
 
-.part3 .hospital img {
+.part3 .hospital {
   top: 50px;
   left: 50px;
 }
 
-.part3 .school img {
-  top: 50px;
-  right: 50px;
-}
-
-.part3 .family img {
-  bottom: 50px;
-  left: 50px;
-}
-
-.part3 .meeting img {
-  bottom: 50px;
-  right: 50px;
-}
-
-.part4 .hospital img {
-  top: 50px;
-  left: 50px;
-}
-
-.part4 .school img {
+.part3 .school {
   top: 50px;
   right: 50px;
 }
 
-.part4 .family img {
+.part3 .family {
   bottom: 50px;
   left: 50px;
 }
 
-.part4 .meeting img {
-  bottom: 50px;
-  right: 50px;
-}
-
-.part5 .hospital img {
-  top: 50px;
-  left: 50px;
-}
-
-.part5 .school img {
-  top: 50px;
-  right: 50px;
-}
-
-.part5 .family img {
-  bottom: 50px;
-  left: 50px;
-}
-
-.part5 .meeting img {
+.part3 .meeting {
   bottom: 50px;
   right: 50px;
 }
 
-.part6 .hospital img {
+.part4 .hospital {
   top: 50px;
   left: 50px;
 }
 
-.part6 .school img {
+.part4 .school {
   top: 50px;
   right: 50px;
 }
 
-.part6 .family img {
+.part4 .family {
   bottom: 50px;
   left: 50px;
 }
 
-.part6 .meeting img {
+.part4 .meeting {
+  bottom: 50px;
+  right: 50px;
+}
+
+.part5 .hospital {
+  top: 50px;
+  left: 50px;
+}
+
+.part5 .school {
+  top: 50px;
+  right: 50px;
+}
+
+.part5 .family {
+  bottom: 50px;
+  left: 50px;
+}
+
+.part5 .meeting {
+  bottom: 50px;
+  right: 50px;
+}
+
+.part6 .hospital {
+  top: 50px;
+  left: 50px;
+}
+
+.part6 .school {
+  top: 50px;
+  right: 50px;
+}
+
+.part6 .family {
+  bottom: 50px;
+  left: 50px;
+}
+
+.part6 .meeting {
   bottom: 50px;
   right: 50px;
 }

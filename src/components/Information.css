@@ -93,44 +93,12 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(128, 128, 128); /* 半透明のグレー */
+  background-color: rgba(124, 123, 123); /* 半透明のグレー */
   padding: 20px; /* 上下のパディングを調整 */
-  width: 100%; /* 横幅を調整 */
+  width: 80%; /* 横幅を調整 */
   max-width: 800px; /* 最大横幅を設定 */
-  height: 70%; /* 高さは自動調整 */
+  height: auto; /* 高さは自動調整 */
   border-radius: 10px;
   color: #fff;
   text-align: center;
-}
-
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background: #333;
-  color: #fff;
-  position: fixed;
-  top: -60px; /* 初期状態でヘッダーを画面外に隠す */
-  left: 0;
-  right: 0;
-  height: 60px;
-  transition: top 0.3s ease;
-  z-index: 1000; /* ヘッダーを前面に表示 */
-}
-
-.header.visible {
-  top: 0; /* ヘッダーが表示される位置 */
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  width: 100%;
-  height: 40px;
-  position: fixed;
-  bottom: 0;
 }

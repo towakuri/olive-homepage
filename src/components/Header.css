@@ -1,4 +1,5 @@
-.header {
+/* src/components/Header.css */
+body .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,37 +11,39 @@
   left: 0;
   right: 0;
   height: 50px;
-  transition: top 0.3s ease;
   z-index: 1000; /* ヘッダーを前面に表示 */
 }
 
-.header h1 {
+body .header .title {
   margin: 0;
-  font-size: 24px;
+  font-size: 40px;
 }
 
-.menuIcon {
+body .header .menuIcon {
   cursor: pointer;
   font-size: 24px;
 }
 
-nav {
-  position: absolute;
+body .header .nav {
+  position: fixed;
   top: 0;
   right: -300px;
-  height: 100%;
+  height: 70px; 
   background: #fff;
   color: #333;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease-in-out;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* 縦に並べる */
   align-items: center;
   justify-content: center;
   width: 300px;
 }
 
-.closeIcon {
+body .header .nav.open {
+  right: 0;
+}
+
+body .header .nav .closeIcon {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -48,19 +51,21 @@ nav {
   font-size: 24px;
 }
 
-nav ul {
+body .header .nav .navList {
+  display: flex;
+  flex-direction: column; /* 縦に並べる */
   list-style: none;
   padding: 0;
   margin: 0;
   text-align: center;
 }
 
-nav li {
-  padding: 10px 0;
+body .header .nav .navItem {
+  padding: 10px 0;  /* 上下のパディングを設定 */
   width: 100%;
 }
 
-nav a {
+body .header .nav .navLink {
   text-decoration: none;
   color: #333;
 }

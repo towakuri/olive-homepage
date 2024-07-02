@@ -1,0 +1,64 @@
+/* src/components/PressRelease.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0;
+}
+
+.press-release-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.press-release-container h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  width: 100%; /* 親コンテナに合わせる */
+}
+
+.press-release-list {
+  max-height: 400px; /* スクロール可能な最大高さ */
+  overflow-y: auto; /* 縦方向のスクロールを有効にする */
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.press-release-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.date {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.content {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.center-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%; /* 必要に応じて調整 */
+  max-width: 800px; /* 必要に応じて調整 */
+  height: auto; /* 必要に応じて調整 */
+  background-color: rgba(124, 123, 123, 0.9); /* 半透明のグレー */
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  overflow-y: auto; /* 必要に応じてスクロール */
+}
