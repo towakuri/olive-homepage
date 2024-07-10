@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
@@ -9,21 +8,27 @@ import './App.css';
 import usePageViews from './usePageViews';
 
 function App() {
+  return (
+    <Router>
+      <PageViewWrapper />
+    </Router>
+  );
+}
+
+function PageViewWrapper() {
   usePageViews(); // ページビューのトラッキングを適用
 
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <div className="container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/information" element={<Information />} />
-          </Routes>
-        </div>
-        <Footer />
+    <div className="App">
+      <Header />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/information" element={<Information />} />
+        </Routes>
       </div>
-    </Router>
+      <Footer />
+    </div>
   );
 }
 

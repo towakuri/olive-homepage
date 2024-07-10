@@ -1,17 +1,8 @@
-/* 基本スタイル（デフォルト） */
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .App {
   text-align: center;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: white;
 }
 
 header {
@@ -24,42 +15,4 @@ footer {
   background-color: #3b3c36;
   padding: 10px;
   color: white;
-}
-
-/* コンテナのスタイル */
-.container {
-  width: 80%;
-  margin: 0 auto;
-  flex: 1; /* フッターをボトムに固定するため */
-}
-
-/* レスポンシブデザイン: タブレット向け */
-@media (max-width: 768px) {
-  .container {
-    width: 90%;
-  }
-
-  header {
-    padding: 15px;
-  }
-
-  footer {
-    padding: 8px;
-  }
-}
-
-/* レスポンシブデザイン: スマートフォン向け */
-@media (max-width: 480px) {
-  .container {
-    width: 100%;
-    padding: 0 10px;
-  }
-
-  header {
-    padding: 10px;
-  }
-
-  footer {
-    padding: 5px;
-  }
 }
