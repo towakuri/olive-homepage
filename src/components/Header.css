@@ -17,6 +17,7 @@ body .header {
 body .header .title {
   margin: 0;
   font-size: 40px;
+  color: #fff;
 }
 
 body .header .menuIcon {

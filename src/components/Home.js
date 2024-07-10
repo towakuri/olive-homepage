@@ -1,9 +1,7 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect } from 'react';
 import './Home.css'; // 必要に応じてCSSをインポート
 
 function Home() {
-  const [showLanguageMenu, setShowLanguageMenu] = useState(false);
-  const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
 
   useEffect(() => {
     const observerOptions = {
@@ -29,24 +27,6 @@ function Home() {
     };
   }, []);
 
-  const toggleLanguageMenu = (event) => {
-    const rect = event.target.getBoundingClientRect();
-    setMenuPosition({ top: rect.top, left: rect.right });
-    setShowLanguageMenu(!showLanguageMenu);
-  };
-
-  const closeLanguageMenu = useCallback((event) => {
-    if (showLanguageMenu && !event.target.closest('.language-menu') && !event.target.closest('img[alt="language switching"]')) {
-      setShowLanguageMenu(false);
-    }
-  }, [showLanguageMenu]);
-
-  useEffect(() => {
-    document.addEventListener('click', closeLanguageMenu);
-    return () => {
-      document.removeEventListener('click', closeLanguageMenu);
-    };
-  }, [closeLanguageMenu]);
 
   return (
     <main>
@@ -55,26 +35,7 @@ function Home() {
         <p>感情は全ての原点</p>
         <p>あなたのためのテクノロジーでありたい</p>
         <p>We “Sense” You</p>
-        <div className="language-switch">
-          <img
-            src="/language.svg"
-            alt="language switching"
-            onClick={toggleLanguageMenu}
-          />
-          <span>language</span>
-        </div>
-        {showLanguageMenu && (
-          <div
-            className="language-menu"
-            style={{ top: `${menuPosition.top}px`, left: `${menuPosition.left}px` }}
-          >
-            <p>言語を選択してください</p>
-            <ul>
-              <li>日本語</li>
-              <li>English</li>
-            </ul>
-          </div>
-        )}
+       
       </div>
       <div className="part2">
         <p>感情を計測ってなに？</p>

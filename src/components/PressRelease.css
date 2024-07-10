@@ -20,6 +20,7 @@ body, html {
   margin-bottom: 20px;
   font-size: 32px;
   width: 100%; /* 親コンテナに合わせる */
+  color: black;
 }
 
 .press-release-list {
@@ -45,6 +46,7 @@ body, html {
 .content {
   flex-grow: 1;
   text-align: left;
+  color: black;
 }
 
 .center-text {

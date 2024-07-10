@@ -1,4 +1,3 @@
-// src/components/Information.js
 import React, { useState, useEffect, useCallback } from 'react';
 import Header from './Header'; // ヘッダーコンポーネントをインポート
 import Contact from './Contact';
@@ -46,7 +45,8 @@ function Information() {
     };
   }, []);
 
-  const handleCommentClick = (comment) => {
+  const handleCommentClick = (event, comment) => {
+    event.stopPropagation(); // イベントの伝播を防ぐ
     setSelectedComment(commentTexts[comment]);
   };
 
@@ -77,13 +77,13 @@ function Information() {
             <p
               key={index}
               className={`comment comment${index + 1}`}
-              onClick={() => handleCommentClick(comment)}
+              onClick={(event) => handleCommentClick(event, comment)}
             >
               {comment}
             </p>
           ))}
           {selectedComment && (
-            <div className="center-text">
+            <div className="center-text" onClick={(event) => event.stopPropagation()}>
               {typeof selectedComment === 'string' ? <p>{selectedComment}</p> : selectedComment}
             </div>
           )}

@@ -1,4 +1,4 @@
-/* src/components/Information.css */
+/* Information.css */
 
 body, html {
   margin: 0;
@@ -82,10 +82,7 @@ main {
   transform: rotate(270deg) translate(250px) rotate(-270deg);
 }
 .comment11 {
-  transform: rotate(300deg) translate(250px) rotate(-300deg);
-}
-.comment12 {
-  transform: rotate(330deg) translate(250px) rotate(-330deg);
+  transform: rotate(320deg) translate(250px) rotate(-320deg);
 }
 
 .center-text {
@@ -93,7 +90,7 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(124, 123, 123); /* 半透明のグレー */
+  background-color: rgba(124, 123, 123, 0.8); /* 半透明のグレー */
   padding: 20px; /* 上下のパディングを調整 */
   width: 80%; /* 横幅を調整 */
   max-width: 800px; /* 最大横幅を設定 */
@@ -101,4 +98,23 @@ main {
   border-radius: 10px;
   color: #fff;
   text-align: center;
+}
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0);
+  max-width: 500px; /* ここを変更して横幅を広げる */
+  width: 100%;
+  margin: 0 auto; /* 中央に配置 */
+}
+
+.form-container input,
+.form-container textarea {
+  width: calc(100% - 20px);
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
