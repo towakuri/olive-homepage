@@ -27,7 +27,6 @@ function Home() {
     };
   }, []);
 
-
   return (
     <main>
       <div className="part1">
@@ -35,7 +34,6 @@ function Home() {
         <p>感情は全ての原点</p>
         <p>あなたのためのテクノロジーでありたい</p>
         <p>We “Sense” You</p>
-       
       </div>
       <div className="part2">
         <p>感情を計測ってなに？</p>

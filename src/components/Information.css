@@ -93,7 +93,7 @@ main {
   background-color: rgba(124, 123, 123, 0.8); /* 半透明のグレー */
   padding: 20px; /* 上下のパディングを調整 */
   width: 80%; /* 横幅を調整 */
-  max-width: 800px; /* 最大横幅を設定 */
+  max-width: 500px; /* 最大横幅を設定 */
   height: auto; /* 高さは自動調整 */
   border-radius: 10px;
   color: #fff;

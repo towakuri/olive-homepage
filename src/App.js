@@ -5,30 +5,19 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Information from './components/Information';
 import './App.css';
-import usePageViews from './usePageViews';
 
 function App() {
   return (
     <Router>
-      <PageViewWrapper />
-    </Router>
-  );
-}
-
-function PageViewWrapper() {
-  usePageViews(); // ページビューのトラッキングを適用
-
-  return (
-    <div className="App">
-      <Header />
-      <div className="container">
+      <div className="App">
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/information" element={<Information />} />
         </Routes>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </Router>
   );
 }
 

@@ -4,8 +4,21 @@ body, html {
   width: 100%;
   height: 100%;
   font-family: Arial, sans-serif;
-  font-size: 15pt;
   background-color: #fff;
+}
+
+/* 基本スタイル */
+body {
+  font-size: 1.5vw; /* ビューポート幅の1.5%に基づくフォントサイズ */
+}
+
+.container {
+  padding: 20px;
+  background-color: #f8f8f8;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 main {
@@ -17,18 +30,18 @@ main {
 
 .part1 {
   position: relative;
-  transform: translateY(200px); /* ここを大きな値に変更して下に移動 */
-  height: 100vh; /* part1の高さを50vhに設定 */
+  transform: translateY(200px);
+  height: 100vh;
 }
 
 .part2 {
   position: relative;
-  height: 75vh; /* part2の高さを75vhに設定 */
+  height: 75vh;
 }
 
 .part3, .part4, .part5, .part6 {
   position: relative;
-  height: 100vh; /* デフォルトの高さを100vhに設定 */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,8 +51,8 @@ main {
 
 .hospital, .school, .family, .meeting {
   position: absolute;
-  width: 250px;  /* 親要素の幅を設定 */
-  height: 250px;  /* 親要素の高さを設定 */
+  width: 250px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,110 +61,63 @@ main {
 .part2 img {
   max-width: 100%;
   max-height: 100%;
-  width: 150px;  /* ここでサイズを指定 */
-  height: auto;  /* 縦横比を保つために高さを自動設定 */
+  width: 150px;
+  height: auto;
 }
 
-.part3 .hospital img, .part3 .school img, .part3 .family img, .part3 .meeting img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.part3 .hospital {
-  top: 50px;
-  left: 50px;
-}
-
-.part3 .school {
-  top: 50px;
-  right: 50px;
-}
-
-.part3 .family {
-  bottom: 50px;
-  left: 50px;
-}
-
-.part3 .meeting {
-  bottom: 50px;
-  right: 50px;
-}
-
-.part4 .hospital img, .part4 .school img, .part4 .family img, .part4 .meeting img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.part4 .hospital {
-  top: 50px;
-  left: 50px;
-}
-
-.part4 .school {
-  top: 50px;
-  right: 50px;
-}
-
-.part4 .family {
-  bottom: 50px;
-  left: 50px;
-}
-
-.part4 .meeting {
-  bottom: 50px;
-  right: 50px;
-}
-
-.part5 .hospital img, .part5 .school img, .part5 .family img, .part5 .meeting img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.part5 .hospital {
-  top: 50px;
-  left: 50px;
-}
-
-.part5 .school {
-  top: 50px;
-  right: 50px;
-}
-
-.part5 .family {
-  bottom: 50px;
-  left: 50px;
-}
-
-.part5 .meeting {
-  bottom: 50px;
-  right: 50px;
-}
-
+.part3 .hospital img, .part3 .school img, .part3 .family img, .part3 .meeting img,
+.part4 .hospital img, .part4 .school img, .part4 .family img, .part4 .meeting img,
+.part5 .hospital img, .part5 .school img, .part5 .family img, .part5 .meeting img,
 .part6 .hospital img, .part6 .school img, .part6 .family img, .part6 .meeting img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
 
-.part6 .hospital {
+.part3 .hospital, .part4 .hospital, .part5 .hospital, .part6 .hospital {
   top: 50px;
   left: 50px;
 }
 
-.part6 .school {
+.part3 .school, .part4 .school, .part5 .school, .part6 .school {
   top: 50px;
   right: 50px;
 }
 
-.part6 .family {
+.part3 .family, .part4 .family, .part5 .family, .part6 .family {
   bottom: 50px;
   left: 50px;
 }
 
-.part6 .meeting {
+.part3 .meeting, .part4 .meeting, .part5 .meeting, .part6 .meeting {
   bottom: 50px;
   right: 50px;
+}
+
+/* タブレット向けスタイル */
+@media (max-width: 768px) {
+  body {
+    font-size: 2.5vw; /* タブレット用にフォントサイズを調整 */
+  }
+  .hospital, .school, .family, .meeting {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* スマートフォン向けスタイル */
+@media (max-width: 480px) {
+  body {
+    font-size: 4vw; /* スマートフォン用にフォントサイズを調整 */
+  }
+  .hospital, .school, .family, .meeting {
+    width: 75px;
+    height: 75px;
+  }
+  .part {
+    padding: 10px;
+  }
+  .part p {
+    font-size: 4vw; /* スマートフォン用に段落のフォントサイズを調整 */
+  }
 }
