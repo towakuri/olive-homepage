@@ -41,6 +41,7 @@ body, html {
 .date {
   font-weight: bold;
   margin-right: 10px;
+  color: black;
 }
 
 .content {
@@ -63,4 +64,5 @@ body, html {
   color: #fff;
   text-align: center;
   overflow-y: auto; /* 必要に応じてスクロール */
+  font-size: 15px;
 }
