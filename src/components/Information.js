@@ -3,6 +3,14 @@ import Header from './Header'; // ヘッダーコンポーネントをインポ�
 import Contact from './Contact';
 import PressRelease from './PressRelease';
 import Recruit from './Recruit';
+import Story from './Story';
+import Market from './Market';
+import Multimodal from './Multimodal';
+import LaCause from './LaCause';
+import JapanMap from './JapanMap';
+import CompanyProfile from './CompanyProfile';
+import Secret from './Secret';
+import AboutOlive from './AboutOlive';
 import './Information.css';
 
 function Information() {
@@ -10,17 +18,17 @@ function Information() {
   const [selectedComment, setSelectedComment] = useState(null);
 
   const commentTexts = {
-    '開発者ストーリー': 'Oliveの活動は、生体データの解析を通して「なぜその人がその考えに至ったのか」という、人間の行動と感情の因果関係を明らかにすることです。世の中のデジタル化が急速に進むなか、このWHYの視点を明らかにするテクノロジーは、ユーザーの気持ちをデジタル世界に反映する非常に重要なピースになります。感情を中心にデジタル化を考えることで、本当の意味でのユーザーのためのサービスが生まれると、私達は信じています。',
-    '我々の取り組む市場': 'Oliveでは内閣府が提唱する「Society 5.0」や「Marketing 4.0」で語られる「Personalized Service」の実現のために必要とされる根底のデータとして「感情」の可視化に取り組んでまいります。',
-    'マルチモーダル': 'マルチモーダル感情認識技術の活用感情認識で最もメジャーなのが音声と表情を利用したものですが一人でいる時には発話や表情がはっきりと示されないため実は利用できるシーンが限定的です。Oliveでは状況に合わせて複数の情報を組み合わせるマルチモーダルな感情認識技術を採用しています。言語的な情報が含まれないため、シーンに依存しない計測が可能でユーザの抵抗感が少ないのが特徴です。',
-    'La Cause': '心配りのコミュニケーション「心配り」は相手の気持ちに配慮する “察する” という意味の言葉ですが感情を周囲に見える化する「心を配信する」という読んで字の如くの意味も込められています。Oliveでは生体情報を中心としたマルチモーダル感情認識技術によって心と心をつなげるコミュニケーションを提供します。',
+    '開発者ストーリー': <Story />,
+    '我々の取り組む市場': <Market />,
+    'マルチモーダル': <Multimodal />,
+    'La Cause': <LaCause />,
     '採用情報': <Recruit />,  
-    '今の日本地図': 'これは今の日本地図の文章です。',
-    '会社概要': 'これは会社概要の文章です。',
+    '今の日本地図': <JapanMap />,
+    '会社概要': <CompanyProfile />,
     'お問い合わせ': <Contact />,  
-    'Secret': 'これはSecretの文章です。',
+    'Secret': <Secret />,
     'プレスリリース': <PressRelease />,  
-    'Oliveとは': '私たちは「察してくれる社会の実現」に向け生体データに基づく感情の可視化に取り組んでいます。あらゆるもののスマート化が進むなか忘れてはならないのが「人の感情」です。「人の感情」とは全てを生み出すエネルギーの源。私たちは、その源泉を解き明かし可視化しこのスマート社会に反映していきます。'
+    'Oliveとは': <AboutOlive />
   };
 
   const handleMouseMove = (event) => {
@@ -85,7 +93,7 @@ function Information() {
           ))}
           {selectedComment && (
             <div className="center-text" onClick={(event) => event.stopPropagation()}>
-              {typeof selectedComment === 'string' ? <p>{selectedComment}</p> : selectedComment}
+              {selectedComment}
             </div>
           )}
         </div>
