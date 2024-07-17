@@ -40,7 +40,7 @@ const Recruit = () => {
         </div>
         <div className="section">
           <h2>インターン</h2>
-          <p>・理系、文系問わず、インターン募集しています。</p>
+          <p>理系、文系問わず、インターン募集しています。</p>
           <p>ベンチャーでのインターンを経験することで社会に出る前に身近に会社経営や事業の成長、モノづくりを経験してみませんか？</p>
         </div>
         <div className="section">
@@ -65,7 +65,7 @@ const Recruit = () => {
         </div>
         <div className="section">
           <h2>応募方法</h2>
-          <p>recruit@olive.co.jpへメールまたは、下のContact Usからご連絡ください</p>
+          <p>recruit@olive.co.jpへメールまたは、「お問い合わせ」からご連絡ください</p>
         </div>
       </div>
     </div>

@@ -85,20 +85,32 @@ main {
   transform: rotate(320deg) translate(250px) rotate(-320deg);
 }
 
+
+.white-container {
+  background-color: white; /* 白い背景色 */
+  padding: 20px; /* パディングを追加 */
+  border-radius: 10px; /* 角を丸めます */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ボックスシャドウを追加 */
+  width: 100%; /* 幅を100%に設定します */
+  height: 100%; /* 高さを100%に設定します */
+  overflow-y: auto; /* 縦方向のスクロールを有効にします */
+}
+
 .center-text {
   position: absolute; /* 親要素に対して絶対位置を設定します。これは他の要素に対して自由に配置するために使用します。 */
   top: 50%; /* 親要素の垂直方向の中央に配置します。 */
   left: 50%; /* 親要素の水平方向の中央に配置します。 */
   transform: translate(-50%, -50%); /* 元の位置を親要素の中央からさらに中央に移動します。これにより、要素は完全に中央に配置されます。 */
-  background-color: rgba(124, 123, 123); /* 背景色を設定します。rgbaの形式を使用することで、色の透明度を調整できます。ここでは半透明のグレーです。 */
-  padding: 15px; /* 要素内のコンテンツの上下左右に20ピクセルの余白を追加します。 */
+  background-color: #fff; 
+  padding: 20px; /* 要素内のコンテンツの上下左右に20ピクセルの余白を追加します。 */
   width: 80vw; /* ビュー幅の80%に設定します。 */
   max-width: 800px; /* 最大幅を800ピクセルに設定します。 */
   height: 100%; /* 要素の高さをコンテンツに応じて自動的に調整します。 */
+  border: 20px solid #3b3b3b;
   border-radius: 10px; /* 要素の角を10ピクセルの半径で丸めます。 */
-  color: #fff; /* テキストの色を白に設定します。 */
   text-align: center; /* 要素内のテキストを中央揃えにします。 */
 }
+
 
 .form-container {
   background-color: white;
@@ -117,4 +129,9 @@ main {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+p {
+  margin: 5px 0;
+  color: #000;
 }

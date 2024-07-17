@@ -7,11 +7,14 @@ body, html {
   }
   
   .recruit-container {
-    max-width: 800px;
-    max-height: 400px;
+    position: fixed;
+    max-width: 600px;
+    max-height: 500px;
     margin: 50px auto;
     padding: 20px;
     border-radius: 10px;
+    background-color: #ffffff;
+    z-index: 1000;
   }
   
   h1 {
@@ -28,16 +31,19 @@ body, html {
   
   .section {
     margin-bottom: 20px;
+    color: #000;
   }
   
   .section ul {
     list-style-type: none;
     padding-left: 0;
+    color: #000;
   }
   
   .section ul ul {
-    list-style-type: disc;
+    list-style-type: none;
     padding-left: 20px;
+    color: #000;
   }
   
   p {
