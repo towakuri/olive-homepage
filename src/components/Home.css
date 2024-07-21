@@ -37,6 +37,9 @@ main {
 .part2 {
   position: relative;
   height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .part3, .part4, .part5, .part6 {

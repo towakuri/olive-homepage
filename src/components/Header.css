@@ -10,7 +10,7 @@ body .header {
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  height: 70px;
   z-index: 1000; /* ヘッダーを前面に表示 */
 }
 
@@ -30,7 +30,7 @@ body .header .nav {
   top: 0;
   right: -300px;
   height: 70px; 
-  background: #fff;
+  background: #c6c6c6;
   color: #333;
   transition: right 0.3s ease-in-out;
   display: flex;
@@ -62,7 +62,7 @@ body .header .nav .navList {
 }
 
 body .header .nav .navItem {
-  padding: 10px 0;  /* 上下のパディングを設定 */
+  padding: 5px 0;  /* 上下のパディングを設定 */
   width: 100%;
 }
 

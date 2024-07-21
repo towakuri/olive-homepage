@@ -29,12 +29,15 @@ main {
 }
 
 .circle-container {
-  position: relative;
-  width: 700px; /* 中央に配置するためのサイズを指定 */
-  height: 550px; /* 中央に配置するためのサイズを指定 */
+  position: absolute; /* 画面全体を覆うために絶対位置を設定 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .center-image {
@@ -85,30 +88,19 @@ main {
   transform: rotate(320deg) translate(250px) rotate(-320deg);
 }
 
-
-.white-container {
-  background-color: white; /* 白い背景色 */
-  padding: 20px; /* パディングを追加 */
-  border-radius: 10px; /* 角を丸めます */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ボックスシャドウを追加 */
-  width: 100%; /* 幅を100%に設定します */
-  height: 100%; /* 高さを100%に設定します */
-  overflow-y: auto; /* 縦方向のスクロールを有効にします */
-}
-
 .center-text {
   position: absolute; /* 親要素に対して絶対位置を設定します。これは他の要素に対して自由に配置するために使用します。 */
   top: 50%; /* 親要素の垂直方向の中央に配置します。 */
   left: 50%; /* 親要素の水平方向の中央に配置します。 */
   transform: translate(-50%, -50%); /* 元の位置を親要素の中央からさらに中央に移動します。これにより、要素は完全に中央に配置されます。 */
-  background-color: #fff; 
+  background-color: #198ab7; 
   padding: 20px; /* 要素内のコンテンツの上下左右に20ピクセルの余白を追加します。 */
   width: 80vw; /* ビュー幅の80%に設定します。 */
-  max-width: 800px; /* 最大幅を800ピクセルに設定します。 */
-  height: 100%; /* 要素の高さをコンテンツに応じて自動的に調整します。 */
-  border: 20px solid #3b3b3b;
+  max-width: 1500px; /* 最大幅を800ピクセルに設定します。 */
+  height: 100%; 
   border-radius: 10px; /* 要素の角を10ピクセルの半径で丸めます。 */
   text-align: center; /* 要素内のテキストを中央揃えにします。 */
+  margin: 30px;
 }
 
 
@@ -134,4 +126,9 @@ main {
 p {
   margin: 5px 0;
   color: #000;
+}
+
+header, footer {
+  position: relative; /* 他の要素と同様に relative を設定 */
+  z-index: 1; /* circle-container より低い z-index を設定 */
 }
