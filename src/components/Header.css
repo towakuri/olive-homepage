@@ -1,4 +1,3 @@
-/* src/components/Header.css */
 body .header {
   display: flex;
   justify-content: space-between;
@@ -11,7 +10,7 @@ body .header {
   left: 0;
   right: 0;
   height: 70px;
-  z-index: 1000; /* ヘッダーを前面に表示 */
+  z-index: 1000;
 }
 
 body .header .title {
@@ -22,7 +21,7 @@ body .header .title {
 
 body .header .menuIcon {
   cursor: pointer;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 body .header .nav {
@@ -34,7 +33,7 @@ body .header .nav {
   color: #333;
   transition: right 0.3s ease-in-out;
   display: flex;
-  flex-direction: column; /* 縦に並べる */
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
   width: 300px;
@@ -54,7 +53,7 @@ body .header .nav .closeIcon {
 
 body .header .nav .navList {
   display: flex;
-  flex-direction: column; /* 縦に並べる */
+  flex-direction: column; 
   list-style: none;
   padding: 0;
   margin: 0;
@@ -62,11 +61,11 @@ body .header .nav .navList {
 }
 
 body .header .nav .navItem {
-  padding: 5px 0;  /* 上下のパディングを設定 */
   width: 100%;
 }
 
 body .header .nav .navLink {
   text-decoration: none;
   color: #333;
+  font-size: 20px;
 }

@@ -6,7 +6,7 @@ body, html {
   width: 100%;
   height: 100%;
   font-family: Arial, sans-serif;
-  font-size: 15pt;
+  font-size: 20pt;
   background-color: #fff;
 }
 
@@ -52,6 +52,7 @@ main {
   text-align: center;
   cursor: pointer; /* クリック可能であることを示す */
   white-space: nowrap; /* テキストの改行を防ぐ */
+  font-size: 20px;
 }
 
 .comment1 {
@@ -93,12 +94,14 @@ main {
   top: 50%; /* 親要素の垂直方向の中央に配置します。 */
   left: 50%; /* 親要素の水平方向の中央に配置します。 */
   transform: translate(-50%, -50%); /* 元の位置を親要素の中央からさらに中央に移動します。これにより、要素は完全に中央に配置されます。 */
-  background-color: #198ab7; 
+  background-color: #6b8e23; 
   padding: 20px; /* 要素内のコンテンツの上下左右に20ピクセルの余白を追加します。 */
   width: 80vw; /* ビュー幅の80%に設定します。 */
   max-width: 1500px; /* 最大幅を800ピクセルに設定します。 */
-  height: 100%; 
+  height: 100%;
   border-radius: 10px; /* 要素の角を10ピクセルの半径で丸めます。 */
+  border: 20px;
+  border-color: #000;
   text-align: center; /* 要素内のテキストを中央揃えにします。 */
   margin: 30px;
 }
