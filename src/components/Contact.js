@@ -25,11 +25,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="container">
+    <div className="content">
       <h1>お問い合わせ</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="lastName">姓</label>
+          <p>姓</p>
           <input
             type="text"
             id="lastName"
@@ -41,7 +41,7 @@ const Contact = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="firstName">名</label>
+          <p>名</p>
           <input
             type="text"
             id="firstName"
@@ -53,7 +53,7 @@ const Contact = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="email">メールアドレス</label>
+          <p>メールアドレス</p>
           <input
             type="email"
             id="email"
@@ -65,7 +65,7 @@ const Contact = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="phone">電話番号</label>
+          <p>電話番号</p>
           <input
             type="tel"
             id="phone"
@@ -77,7 +77,7 @@ const Contact = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="message">お問い合わせ内容</label>
+          <p>お問い合わせ内容</p>
           <textarea
             id="message"
             name="message"

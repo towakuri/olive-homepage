@@ -24,3 +24,42 @@
   padding: 10px;
   color: white;
 }
+
+/* PC向けスタイル */
+@media (min-width: 769px) {
+  body {
+    font-size: 1vw; /* PC用にフォントサイズを調整 */
+  }
+  .hospital, .school, .family, .meeting {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* タブレット向けスタイル */
+@media (max-width: 768px) {
+  body {
+    font-size: 2.5vw; /* タブレット用にフォントサイズを調整 */
+  }
+  .hospital, .school, .family, .meeting {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* スマートフォン向けスタイル */
+@media (max-width: 480px) {
+  body {
+    font-size: 4vw; /* スマートフォン用にフォントサイズを調整 */
+  }
+  .hospital, .school, .family, .meeting {
+    width: 75px;
+    height: 75px;
+  }
+  .part {
+    padding: 10px;
+  }
+  .part p {
+    font-size: 4vw; /* スマートフォン用に段落のフォントサイズを調整 */
+  }
+}
