@@ -50,9 +50,10 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 30px;
 }
 
-.hospital, .school, .family, .meeting {
+.hospital, .school, .family, .meeting, .family2 {
   position: absolute;
   width: 250px;
   height: 250px;
@@ -84,7 +85,7 @@ main {
   right: 50px;
 }
 
-.part3 .family, .part4 .family, .part5 .family, .part6 .family {
+.part3 .family, .part4 .family, .part5 .family2, .part6 .family2 {
   bottom: 50px;
   left: 50px;
 }
@@ -94,15 +95,95 @@ main {
   right: 50px;
 }
 
-.animated {
-  animation: fadeIn 2s ease-in-out;
+.sweat {
+  position: absolute; 
+  top: 160px; 
+  left: 320px; 
+  transform: translate(-50%, -50%);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+.circle {
+  position: absolute; 
+  top: 80px; 
+  right: 5px;
+  transform: translate(-50%, -50%);
+}
+
+.question {
+  position: absolute; 
+  bottom: 220px; 
+  left: 100px;
+  transform: translate(-50%, -50%);
+}
+
+.point {
+  position: absolute; 
+  bottom: 200px; 
+  right: 5px;
+  transform: translate(-50%, -50%);
+}
+
+.green {
+  position: absolute; 
+  bottom: 200px; 
+  right: 5px;
+  transform: translate(-50%, -50%);
+}
+
+.red {
+  position: absolute; 
+  bottom: 220px; 
+  left: 260px;
+  transform: translate(-50%, -50%);
+}
+
+.blue {
+  position: absolute; 
+  top: 190px; 
+  left: 355px;
+  transform: translate(-50%, -50%);
+}
+
+.yellow1 {
+  position: absolute; 
+  top: 300px; 
+  right: 150px;
+  transform: translate(-50%, -50%);
+}
+
+.yellow2 {
+  position: absolute; 
+  bottom: 1px; 
+  right: 200px;
+  transform: translate(-50%, -50%);
+}
+
+.present {
+  position: absolute; 
+  top: 200px; 
+  right: 300px;
+  width: 180px;
+  transform: translate(-50%, -50%);
+}
+
+.firework {
+  position: absolute; 
+  top: 120px; 
+  left: 550px;
+  width: 170px;
+  transform: translate(-50%, -50%);
+}
+
+/* Home.css */
+.scale-target {
+  animation: scale-animation 1.5s infinite alternate ease;
+}
+
+@keyframes scale-animation {
+  0% {
+    transform: scale(0.8);
   }
-  to {
-    opacity: 1;
+  100% {
+    transform: scale(1.0);
   }
 }

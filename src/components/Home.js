@@ -12,6 +12,11 @@ function Home() {
 
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.target.classList.contains('scale-target')) {
+          entry.target.classList.add('scale-up'); // 拡大クラスを追加
+        } else if (entry.target.classList.contains('scale-target')) {
+          entry.target.classList.remove('scale-up'); // 拡大クラスを削除
+        }
       });
     };
 
@@ -44,16 +49,27 @@ function Home() {
         <p>感情を計測してみるとどうなるでしょうか？</p>
         <div className="hospital">
           <img src="/hospital.svg" alt="hospital1" />
+        </div>
+        <div className="sweat scale-target">
           <img src="/sweat.svg" alt="sweat1" />
         </div>
         <div className="school">
           <img src="/school.svg" alt="school1" />
         </div>
+        <div className="circle scale-target">
+          <img src="/circle.svg" alt="circle1" />
+        </div>
         <div className="family">
           <img src="/family.svg" alt="family1" />
         </div>
+        <div className="question scale-target">
+          <img src="/question.svg" alt="question1" />
+        </div>
         <div className="meeting">
           <img src="/meeting.svg" alt="meeting1" />
+        </div>
+        <div className="point scale-target">
+          <img src="/point.svg" alt="point1" />
         </div>
       </div>
       <div className="part4">
@@ -71,6 +87,21 @@ function Home() {
         <div className="meeting">
           <img src="/meeting.svg" alt="meeting2" />
         </div>
+        <div className="green">
+          <img src="/green.svg" alt="green" />
+        </div>
+        <div className="blue">
+          <img src="/blue.svg" alt="blue" />
+        </div>
+        <div className="red">
+          <img src="/red.svg" alt="red" />
+        </div>
+        <div className="yellow1">
+          <img src="/yellow.svg" alt="yellow1" />
+        </div>
+        <div className="yellow2">
+          <img src="/yellow.svg" alt="yellow2" />
+        </div>
       </div>
       <div className="part5">
         <p>メンタルヘルスケア</p>
@@ -83,8 +114,8 @@ function Home() {
         <div className="school">
           <img src="/school.svg" alt="school3" />
         </div>
-        <div className="family">
-          <img src="/family.svg" alt="family3" />
+        <div className="family2">
+          <img src="/family2.svg" alt="family3" />
         </div>
         <div className="meeting">
           <img src="/meeting.svg" alt="meeting3" />
@@ -101,11 +132,17 @@ function Home() {
         <div className="school">
           <img src="/school.svg" alt="school4" />
         </div>
-        <div className="family">
-          <img src="/family.svg" alt="family4" />
+        <div className="family2">
+          <img src="/family2.svg" alt="family4" />
         </div>
         <div className="meeting">
           <img src="/meeting.svg" alt="meeting4" />
+        </div>
+        <div className="present">
+          <img src="/present.svg" alt="present" />
+        </div>
+        <div className="firework">
+          <img src="/firework.svg" alt="firework" />
         </div>
       </div>
     </main>
