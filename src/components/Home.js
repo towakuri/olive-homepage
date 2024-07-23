@@ -44,6 +44,7 @@ function Home() {
         <p>感情を計測してみるとどうなるでしょうか？</p>
         <div className="hospital">
           <img src="/hospital.svg" alt="hospital1" />
+          <img src="/sweat.svg" alt="sweat1" />
         </div>
         <div className="school">
           <img src="/school.svg" alt="school1" />

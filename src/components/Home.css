@@ -68,10 +68,7 @@ main {
   height: auto;
 }
 
-.part3 .hospital img, .part3 .school img, .part3 .family img, .part3 .meeting img,
-.part4 .hospital img, .part4 .school img, .part4 .family img, .part4 .meeting img,
-.part5 .hospital img, .part5 .school img, .part5 .family img, .part5 .meeting img,
-.part6 .hospital img, .part6 .school img, .part6 .family img, .part6 .meeting img {
+.part3 img, .part4 img, .part5 img, .part6 img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -97,3 +94,15 @@ main {
   right: 50px;
 }
 
+.animated {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
