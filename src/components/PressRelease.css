@@ -18,13 +18,14 @@ body, html {
   margin-bottom: 20px;
   font-size: 32px;
   width: 100%; /* 親コンテナに合わせる */
-  color: black;
+  color: #fff;
 }
 
 .press-release-list {
   max-height: 400px; /* スクロール可能な最大高さ */
   overflow-y: auto; /* 縦方向のスクロールを有効にする */
   border: 1px solid #ccc;
+  border-radius: 10px; /* 角を丸くする */
   padding: 10px;
 }
 
@@ -39,13 +40,13 @@ body, html {
 .date {
   font-weight: bold;
   margin-right: 10px;
-  color: black;
+  color: #fff;
 }
 
 .content {
   flex-grow: 1;
   text-align: left;
-  color: black;
+  color: #fff;
 }
 
 .center-text {

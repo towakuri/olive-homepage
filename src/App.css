@@ -28,11 +28,11 @@
 /* PC向けスタイル */
 @media (min-width: 769px) {
   body {
-    font-size: 1vw; /* PC用にフォントサイズを調整 */
+    font-size: 1.3vw; /* PC用にフォントサイズを調整 */
   }
   .hospital, .school, .family, .meeting {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
   }
 }
 

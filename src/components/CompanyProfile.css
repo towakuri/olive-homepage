@@ -1,0 +1,33 @@
+.company-profile {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+}
+
+.company-profile h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+}
+
+.company-profile table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.company-profile td {
+  padding: 10px;
+  vertical-align: top;
+}
+
+.company-profile .label {
+  text-align: right;
+  font-weight: bold;
+  padding-right: 10px;
+  padding-left: 50px;
+  white-space: nowrap;
+}
+
+.company-profile td:nth-child(2) {
+  text-align: left; /* 2列目のtdを左揃えにする */
+}

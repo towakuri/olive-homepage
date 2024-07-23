@@ -1,3 +1,49 @@
 .recruit-container {
-  height: 100%;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  height: 100%; /* 高さを自動に変更 */
+  text-align: center;
+}
+
+.recruit-content {
+  margin-top: 20px;
+}
+
+.section {
+  margin: 40px 0; /* 上下のマージンを調整 */
+  padding: 20px; /* パディングを追加 */
+  border-radius: 5px; /* 角を丸くする */
+  border-width: 1px;
+  border-color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* 影を追加 */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.recruit-container h1 {
+  font-size: 28px; /* フォントサイズを大きく */
+  font-weight: bold;
+  margin-bottom: 15px; /* マージンを調整 */
+  color: #2c3e50; /* 色を変更 */
+}
+
+.section h2 {
+  font-size: 24px; /* フォントサイズを大きく */
+  color: #34495e; /* 色を変更 */
+  border-bottom: 2px solid #3498db; /* ボーダーの色を変更 */
+  padding-bottom: 8px; /* パディングを調整 */
+  margin-bottom: 15px; /* マージンを調整 */
+}
+
+.section p, .section ul {
+  margin: 10px 0;
+  line-height: 1.6; /* 行間を調整 */
+}
+
+.section ul {
+  padding-left: 20px;
+}
+
+.section ul ul {
+  padding-left: 20px;
 }
