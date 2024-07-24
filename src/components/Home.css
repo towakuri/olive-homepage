@@ -34,12 +34,20 @@ main {
   height: 100vh;
 }
 
+.part1 p {
+  margin: 20px; /* p要素の間隔を変更 */
+}
+
 .part2 {
   position: relative;
   height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.part5 p {
+  margin-bottom: 50px; /* p要素の間隔を変更 */
 }
 
 .part3, .part4, .part5, .part6 {
@@ -50,7 +58,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 30px;
+  margin-top: 200px;
 }
 
 .hospital, .school, .family, .meeting, .family2 {
@@ -160,9 +168,9 @@ main {
 
 .present {
   position: absolute; 
-  top: 200px; 
-  right: 300px;
-  width: 180px;
+  top: 380px; 
+  left: 300px;
+  width: 160px;
   transform: translate(-50%, -50%);
 }
 
@@ -199,6 +207,30 @@ main {
   position: absolute; 
   bottom: 200px; 
   right: 320px;
+  transform: translate(-50%, -50%);
+}
+
+.communication {
+  position: absolute; 
+  bottom: 280px; 
+  right: 150px;
+  width: 160px;
+  transform: translate(-50%, -50%);
+}
+
+.office {
+  position: absolute; 
+  top: 140px; 
+  right: 330px;
+  width: 170px;
+  transform: translate(-50%, -50%);
+}
+
+.pagetop {
+  position: absolute; 
+  bottom: 60px; 
+  right: 660px;
+  width: 50px; /* 画像のサイズを小さくしました */
   transform: translate(-50%, -50%);
 }
 

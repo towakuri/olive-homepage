@@ -32,6 +32,10 @@ function Home() {
     };
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // スクロールをスムーズに
+  };
+
   return (
     <main>
       <div className="part1">
@@ -155,6 +159,15 @@ function Home() {
         </div>
         <div className="firework">
           <img src="/firework.svg" alt="firework" />
+        </div>
+        <div className="communication">
+          <img src="/communication.svg" alt="communication" />
+        </div>
+        <div className="office">
+          <img src="/office.svg" alt="office" />
+        </div>
+        <div className="pagetop" onClick={scrollToTop}> {/* クリックイベントを追加 */}
+          <img src="/pagetop.svg" alt="pagetop" />
         </div>
       </div>
     </main>
