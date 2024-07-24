@@ -87,20 +87,32 @@ function Home() {
         <div className="meeting">
           <img src="/meeting.svg" alt="meeting2" />
         </div>
-        <div className="green">
+        <div className="green scale-target">
           <img src="/green.svg" alt="green" />
         </div>
-        <div className="blue">
+        <div className="blue scale-target">
           <img src="/blue.svg" alt="blue" />
         </div>
-        <div className="red">
+        <div className="red scale-target">
           <img src="/red.svg" alt="red" />
         </div>
-        <div className="yellow1">
+        <div className="yellow1 scale-target">
           <img src="/yellow.svg" alt="yellow1" />
         </div>
-        <div className="yellow2">
+        <div className="yellow2 scale-target">
           <img src="/yellow.svg" alt="yellow2" />
+        </div>
+        <div className="action scale-target">
+          <img src="/action.svg" alt="action" />
+        </div>
+        <div className="action2 scale-target">
+          <img src="/action2.svg" alt="action2" />
+        </div>
+        <div className="point2 scale-target">
+          <img src="/point2.svg" alt="point2" />
+        </div>
+        <div className="point3 scale-target">
+          <img src="/point3.svg" alt="point3" />
         </div>
       </div>
       <div className="part5">
