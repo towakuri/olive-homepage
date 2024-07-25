@@ -18,10 +18,27 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // ここにフォーム送信のロジックを追加します
-    console.log('Form submitted:', formData);
+    try {
+      const response = await fetch('https://example.com/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        console.log('Form submitted successfully:', formData);
+        // フォーム送信成功時の処理をここに追加します
+      } else {
+        console.error('Form submission error:', response.statusText);
+        // フォーム送信失敗時の処理をここに追加します
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      // フォーム送信エラー時の処理をここに追加します
+    }
   };
 
   return (

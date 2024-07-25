@@ -1,13 +1,9 @@
 .la-cause-container {
     padding: 20px; /* パディングを追加 */
-    border-radius: 8px; /* 角を丸くする */
-    border-width: 1px;
-    border-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* シャドウを追加 */
   }
   
   .la-cause-text {
     font-size: 16px; /* フォントサイズを設定 */
     line-height: 1.5; /* 行間を設定 */
-    color: #fff; /* テキストカラーを設定 */
+    color: #000; /* テキストカラーを設定 */
   }

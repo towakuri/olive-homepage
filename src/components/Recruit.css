@@ -15,22 +15,25 @@
   padding: 20px; /* パディングを追加 */
   border-radius: 5px; /* 角を丸くする */
   border-width: 1px;
-  border-color: #fff;
+  border-color: #000;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* 影を追加 */
-  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.section li {
+  text-align: center;
 }
 
 .recruit-container h1 {
   font-size: 28px; /* フォントサイズを大きく */
   font-weight: bold;
   margin-bottom: 15px; /* マージンを調整 */
-  color: #2c3e50; /* 色を変更 */
+  color: #000; /* 色を変更 */
 }
 
 .section h2 {
   font-size: 24px; /* フォントサイズを大きく */
-  color: #34495e; /* 色を変更 */
-  border-bottom: 2px solid #3498db; /* ボーダーの色を変更 */
+  color: #000; /* 色を変更 */
+  border-bottom: 2px solid #000; /* ボーダーの色を変更 */
   padding-bottom: 8px; /* パディングを調整 */
   margin-bottom: 15px; /* マージンを調整 */
 }
@@ -38,10 +41,7 @@
 .section p, .section ul {
   margin: 10px 0;
   line-height: 1.6; /* 行間を調整 */
-}
-
-.section ul {
-  padding-left: 20px;
+  color: #000;
 }
 
 .section ul ul {

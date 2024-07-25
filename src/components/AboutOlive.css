@@ -1,13 +1,8 @@
 .about-olive-container {
   padding: 20px;
-  border-radius: 8px; /* 角を丸く */
-  border-width: 1px;
-  border-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影を追加 */
 }
 
-
 .about-olive-container p {
-  color: #fff; /* テキストの色 */
+  color: #000; /* テキストの色 */
   line-height: 1.6; /* 行間 */
 }

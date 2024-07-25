@@ -59,12 +59,8 @@ function Information() {
     setSelectedComment(commentTexts[comment]);
   };
 
-  const handleClickOutside = useCallback((event) => {
-    if (
-      selectedComment &&
-      !event.target.closest('.center-text') &&
-      !event.target.closest('.comment')
-    ) {
+  const handleClickOutside = useCallback(() => {
+    if (selectedComment) {
       setSelectedComment(null);
     }
   }, [selectedComment]);
@@ -92,7 +88,7 @@ function Information() {
             </p>
           ))}
           {selectedComment && (
-            <div className="center-text" onClick={(event) => event.stopPropagation()}>
+            <div className="center-text">
               {selectedComment}
             </div>
           )}

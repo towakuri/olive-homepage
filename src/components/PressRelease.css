@@ -18,13 +18,13 @@ body, html {
   margin-bottom: 20px;
   font-size: 32px;
   width: 100%; /* 親コンテナに合わせる */
-  color: #fff;
+  color: #000;
 }
 
 .press-release-list {
   max-height: 400px; /* スクロール可能な最大高さ */
   overflow-y: auto; /* 縦方向のスクロールを有効にする */
-  border: 1px solid #ccc;
+  border: 1px solid #000;
   border-radius: 10px; /* 角を丸くする */
   padding: 10px;
 }
@@ -34,19 +34,19 @@ body, html {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #000;
 }
 
 .date {
   font-weight: bold;
   margin-right: 10px;
-  color: #fff;
+  color: #000;
 }
 
 .content {
   flex-grow: 1;
   text-align: left;
-  color: #fff;
+  color: #000;
 }
 
 .center-text {

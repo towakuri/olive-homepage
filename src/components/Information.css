@@ -92,7 +92,7 @@ main {
   top: 50%; /* 親要素の垂直方向の中央に配置します。 */
   left: 50%; /* 親要素の水平方向の中央に配置します。 */
   transform: translate(-50%, -50%); /* 元の位置を親要素の中央からさらに中央に移動します。これにより、要素は完全に中央に配置されます。 */
-  background-color: #6b8e23; 
+  background-color:#fff;
   padding: 20px; /* 要素内のコンテンツの上下左右に20ピクセルの余白を追加します。 */
   width: 80vw; /* ビュー幅の80%に設定します。 */
   max-width: 1500px; /* 最大幅を800ピクセルに設定します。 */
@@ -102,6 +102,7 @@ main {
   border-color: #000;
   text-align: center; /* 要素内のテキストを中央揃えにします。 */
   margin: 30px;
+  animation: expand-center 0.5s ease-out forwards; /* アニメーションを追加 */
 }
 
 .form-container {
@@ -130,4 +131,14 @@ main {
 header, footer {
   position: relative; /* 他の要素と同様に relative を設定 */
   z-index: 1; /* circle-container より低い z-index を設定 */
+}
+
+/* 中心から広がるアニメーション */
+@keyframes expand-center {
+  0% {
+    transform: translate(-50%, -50%) scale(0); /* 初期状態は縮小 */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1); /* 最終状態は通常サイズ */
+  }
 }
