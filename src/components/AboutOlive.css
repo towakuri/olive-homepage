@@ -2,7 +2,22 @@
   padding: 20px;
 }
 
+.about-olive-container h1 {
+  color: #000; /* テキストの色 */
+  font-size: 24px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 200px;
+}
+
 .about-olive-container p {
   color: #000; /* テキストの色 */
   line-height: 1.6; /* 行間 */
+  background-color: #9ed79986;
+  text-align: left; /* 左揃え */
+  position: relative; /* 位置を相対的に変更 */
+  border-radius: 10px;
+  padding: 20px;
 }

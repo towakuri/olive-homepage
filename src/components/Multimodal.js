@@ -4,6 +4,7 @@ import './Multimodal.css'; // CSSファイルをインポート
 const Multimodal = () => {
   return (
     <div className="multimodal-container">
+      <h1>マルチモーダル</h1>
       <p>
         マルチモーダル感情認識技術の活用感情認識で最もメジャーなのが音声と表情を利用したものですが、一人でいる時には発話や表情がはっきりと示されないため、実は利用できるシーンが限定的です。
       </p>

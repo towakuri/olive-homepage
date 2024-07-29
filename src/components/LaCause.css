@@ -1,9 +1,22 @@
 .la-cause-container {
     padding: 20px; /* パディングを追加 */
   }
+
+  .la-cause-container h1 {
+    color: #000;
+    font-size: 24px;
+    text-align: center;
+    top: 200px;
+  }
   
   .la-cause-text {
-    font-size: 16px; /* フォントサイズを設定 */
-    line-height: 1.5; /* 行間を設定 */
-    color: #000; /* テキストカラーを設定 */
+    margin-bottom: 20px; /* 各リスト項目の下に余白 */
+    line-height: 1.6; /* 行間を広げる */
+    font-size: 16px; /* フォントサイズ */
+    color: #000; /* テキストの色 */
+    text-align: left;
+    position: relative; /* 位置を相対的に変更 */
+    background-color: #febd6986;
+    border-radius: 10px;
+    padding: 10px;
   }
