@@ -23,7 +23,7 @@
   font-size: 16px; /* フォントサイズ */
   color: #000; /* テキストの色 */
   text-align: left; /* 左揃え */
-  width: 50%;
+  width: 600px;
   background-color: #3d8ecc86;
   border-radius: 10px;
   border-width: 1px;
@@ -38,7 +38,7 @@
   font-size: 16px; /* フォントサイズ */
   color: #000; /* テキストの色 */
   text-align: left;
-  width: 50%;
+  width: 600px;
   position: relative; /* 位置を相対的に変更 */
   left: 250px;
   background-color: #febd6986;

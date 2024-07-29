@@ -5,15 +5,14 @@
   text-align: left; /* テキストを左揃え */
 }
 
-.multimodal-container h1 {
+.multimodal h1 {
   color: #000; /* テキストの色 */
   font-size: 24px;
   text-align: center;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 200px;
-  margin-bottom: 20px;
+  width: 100%;
 }
 
 .multimodal-container p:first-of-type {
@@ -28,6 +27,7 @@
   border-width: 1px;
   border-color: #000;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  width: 800px;
 }
 
 .multimodal-container p:last-of-type {
@@ -42,4 +42,5 @@
   border-width: 1px;
   border-color: #000;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  width: 800px;
 }

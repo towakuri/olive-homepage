@@ -27,6 +27,7 @@ body, html {
   border: 1px solid #000;
   border-radius: 10px; /* 角を丸くする */
   padding: 10px;
+  background-color: #f4b3b386;
 }
 
 .press-release-item {
