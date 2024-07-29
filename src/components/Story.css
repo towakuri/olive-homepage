@@ -2,14 +2,57 @@
   padding: 20px; /* 内側の余白 */
 }
 
-.story-list {
-  list-style-type: none; /* リストのスタイルをなしに */
-  padding: 0; /* パディングをリセット */
+.story-container h1 {
+  display: block;
+  color: #000;
+  font-size: 24px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.story-list li {
+.story-list {
+  list-style-type: none; /* リストのスタイルをなしに */
+}
+
+.story-list li:nth-child(1) {
+  margin-bottom: 20px; /* 各リスト項目の下に余白 */
+  line-height: 1.6; /* 行間を広げる */
+  font-size: 16px; /* フォントサイズ */
+  color: #000; /* テキストの色 */
+  text-align: left; /* 左揃え */
+  width: 50%;
+  background-color: #3d8ecc86;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.story-list li:nth-child(2) {
+  margin-bottom: 20px; /* 各リスト項目の下に余白 */
+  line-height: 1.6; /* 行間を広げる */
+  font-size: 16px; /* フォントサイズ */
+  color: #000; /* テキストの色 */
+  text-align: left;
+  width: 50%;
+  position: relative; /* 位置を相対的に変更 */
+  left: 250px;
+  background-color: #febd6986;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.story-list li:nth-child(3) {
   margin-bottom: 15px; /* 各リスト項目の下に余白 */
   line-height: 1.6; /* 行間を広げる */
   font-size: 16px; /* フォントサイズ */
   color: #000; /* テキストの色 */
+  text-align: left; /* 右揃え */
+  width: 50%;
+  position: relative; /* 位置を相対的に変更 */
+  left: 500px; 
+  background-color: #9ed79986;
+  border-radius: 10px;
+  padding: 10px;
 }

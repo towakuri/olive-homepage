@@ -4,6 +4,7 @@ import './Market.css'; // CSSファイルをインポート
 const Market = () => {
   return (
     <div className="market-container">
+      <h1>我々の取り組む市場</h1>
       <ul className="market-list">
         <li className="market-item">Oliveでは内閣府が提唱する「Society 5.0」や「Marketing 4.0」で語られる「Personalized Service」の実現のために必要とされる根底のデータとして「感情」の可視化に取り組んでまいります。</li>
         <li className="market-item">カメラやセンサー、スマートウォッチによる生体データ計測等の技術は、加速度的に進歩しており、ユーザーもまた生体データを計測されることが日常化してきています。今後、生体計測は様々な市場における必須技術となります。</li>
