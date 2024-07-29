@@ -18,6 +18,7 @@
   border-color: #000;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* 影を追加 */
   background-color: #febd6986;
+  width: 600px;
 }
 
 .section li {

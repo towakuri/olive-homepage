@@ -3,8 +3,9 @@ import './CompanyProfile.css'; // 新しいCSSファイルをインポート
 
 const CompanyProfile = () => {
   return (
+  <div className="company-profile-container">
+    <h2>会社概要</h2>
     <div className="company-profile">
-      <h2>会社概要</h2>
       <table>
         <tbody>
           <tr>
@@ -38,6 +39,7 @@ const CompanyProfile = () => {
         </tbody>
       </table>
     </div>
+  </div>
   );
 };
 

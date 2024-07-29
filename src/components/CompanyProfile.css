@@ -1,22 +1,29 @@
-.company-profile {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  padding: 20px;
-}
-
-.company-profile h2 {
+.company-profile-container h2 {
   text-align: center;
   font-size: 24px;
   color: #000;
+  margin-bottom: 20px;
+}
+
+.company-profile {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 600px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #3d8ecc86;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .company-profile table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 10px;
 }
 
 .company-profile td {
-  padding: 10px;
+  padding: 5px 10px;
   vertical-align: top;
   color: #000;
 }
@@ -24,11 +31,9 @@
 .company-profile .label {
   text-align: right;
   font-weight: bold;
-  padding-right: 10px;
-  padding-left: 50px;
   white-space: nowrap;
 }
 
 .company-profile td:nth-child(2) {
-  text-align: left; /* 2列目のtdを左揃えにする */
+  text-align: left;
 }
