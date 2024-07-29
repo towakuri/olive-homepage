@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Header from './Header'; // ヘッダーコンポーネントをインポート
 import Contact from './Contact';
 import PressRelease from './PressRelease';
@@ -54,21 +54,28 @@ function Information() {
     };
   }, []);
 
+  const contactRef = useRef(null);
+
   const handleCommentClick = (event, comment) => {
-    event.stopPropagation(); // イベントの伝播を防ぐ
+    event.stopPropagation();
     setSelectedComment(commentTexts[comment]);
   };
 
-  const handleClickOutside = useCallback(() => {
-    if (selectedComment) {
+  const handleClickOutside = useCallback((event) => {
+    if (selectedComment && 
+        selectedComment.type === Contact && 
+        contactRef.current && 
+        !contactRef.current.contains(event.target)) {
+      setSelectedComment(null);
+    } else if (selectedComment && selectedComment.type !== Contact) {
       setSelectedComment(null);
     }
   }, [selectedComment]);
 
   useEffect(() => {
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [handleClickOutside]);
 
@@ -89,7 +96,13 @@ function Information() {
           ))}
           {selectedComment && (
             <div className="center-text">
-              {selectedComment}
+              {selectedComment.type === Contact ? (
+                <div ref={contactRef}>
+                  {selectedComment}
+                </div>
+              ) : (
+                selectedComment
+              )}
             </div>
           )}
         </div>
