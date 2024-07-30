@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import Header from './Header'; // ヘッダーコンポーネントをインポート
+import Header from './Header';
 import Contact from './Contact';
 import PressRelease from './PressRelease';
 import Recruit from './Recruit';
@@ -30,6 +30,19 @@ function Information() {
     'プレスリリース': <PressRelease />,  
     'Oliveとは': <AboutOlive />
   };
+
+  useEffect(() => {
+    // Font Awesome CSSの追加
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+    document.head.appendChild(link);
+
+    // クリーンアップ関数
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
 
   const handleMouseMove = (event) => {
     if (event.clientY <= 20) {
@@ -84,15 +97,18 @@ function Information() {
       <Header className={isHeaderVisible ? 'visible' : ''} />
       <div className="info-container">
         <div className="circle-container">
-          <img className="center-image" src="/pc.svg" alt="Central" />
+          <img className="center-image" src="/town.svg" alt="Central" />
+          <div className="heartbeat"></div>
           {Object.keys(commentTexts).map((comment, index) => (
-            <p
-              key={index}
-              className={`comment comment${index + 1}`}
-              onClick={(event) => handleCommentClick(event, comment)}
-            >
-              {comment}
-            </p>
+            <React.Fragment key={index}>
+              <div className={`horizontal-bar bar${index + 1}`}></div>
+              <p
+                className={`comment comment${index + 1}`}
+                onClick={(event) => handleCommentClick(event, comment)}
+              >
+                {comment}
+              </p>
+            </React.Fragment>
           ))}
           {selectedComment && (
             <div className="center-text">

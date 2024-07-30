@@ -1,5 +1,5 @@
 import React from 'react';
-import './Market.css'; // CSSファイルをインポート
+import './Market.css';
 
 const Market = () => {
   return (

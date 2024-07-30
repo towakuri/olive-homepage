@@ -40,51 +40,87 @@ main {
 
 .center-image {
   position: absolute;
-  width: 100px;
+  width: 400px;
   height: auto;
 }
 
 .comment {
   position: absolute;
-  width: 100px; /* 必要に応じて調整 */
+  width: 100px;
   text-align: center;
-  cursor: pointer; /* クリック可能であることを示す */
-  white-space: nowrap; /* テキストの改行を防ぐ */
+  cursor: pointer;
+  white-space: nowrap;
   font-size: 20px;
+  padding-left: 40px; /* アイコンのためのスペースを増やす */
 }
 
+.comment::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px; /* アイコンのサイズを調整 */
+  margin-right: 10px; /* アイコンとテキストの間隔を追加 */
+}
+
+.comment1::before { content: '\f121'; } /* 開発者ストーリー */
+.comment2::before { content: '\f54e'; } /* 市場 */
+.comment3::before { content: '\f3cf'; } /* マルチモーダル */
+.comment4::before { content: '\f21e'; } /* LaCause */
+.comment5::before { content: '\f002'; } /* 採用情報 */
+.comment6::before { content: '\f279'; } /* 今の日本地図 */
+.comment7::before { content: '\f1ad'; } /* 会社概要 */
+.comment8::before { content: '\f0e0'; } /* お問い合わせ */
+.comment9::before { content: '\f023'; } /* secret*/
+.comment10::before { content: '\f1ea'; } /* プレスリリース */
+.comment11::before { content: '\f0c0'; } /* Oliveとは */
+
+
 .comment1 {
-  transform: rotate(0deg) translate(250px) rotate(0deg);
+  transform: translate(300px, -130px);/*開発者ストーリー*/
+  text-align: left;
 }
 .comment2 {
-  transform: rotate(30deg) translate(250px) rotate(-30deg);
+  transform: translate(350px, -40px);/*市場*/
+  text-align: left;
 }
 .comment3 {
-  transform: rotate(60deg) translate(250px) rotate(-60deg);
+  transform: translate(325px, 65px);/*マルチモーダル*/
+  text-align: left;
 }
 .comment4 {
-  transform: rotate(90deg) translate(250px) rotate(-90deg);
+  transform: translate(245px, 170px);/*La Cause*/
+  text-align: left;
 }
 .comment5 {
-  transform: rotate(120deg) translate(250px) rotate(-120deg);
+  transform: translate(200px, -220px);/*採用情報*/
+  text-align: left;
 }
 .comment6 {
-  transform: rotate(150deg) translate(250px) rotate(-150deg);
+  transform: translate(-345px, -160px);/*今の日本地図*/
+  text-align: left;
 }
 .comment7 {
-  transform: rotate(180deg) translate(250px) rotate(-180deg);
+  transform: translate(-380px, -40px);/*会社概要*/
+  text-align: left;
 }
 .comment8 {
-  transform: rotate(210deg) translate(250px) rotate(-210deg);
+  transform: translate(-370px, 60px);/*お問い合わせ*/
+  text-align: left;
 }
 .comment9 {
-  transform: rotate(240deg) translate(250px) rotate(-240deg);
+  transform: translate(-240px, 150px);/*secret*/
+  text-align: left;
 }
 .comment10 {
-  transform: rotate(270deg) translate(250px) rotate(-270deg);
+  transform: translate(-190px, 270px);/*プレスリリース*/
+  text-align: left;
 }
 .comment11 {
-  transform: rotate(320deg) translate(250px) rotate(-320deg);
+  transform: translate(-100px, -245px);/*Oloveとは*/
+  text-align: left;
 }
 
 .center-text {
@@ -128,6 +164,26 @@ main {
   color: #000;
 }
 
+.horizontal-bar {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background-color: #000;
+  transform-origin: left center;
+}
+
+.bar1 { transform: translate(188px, -100px) rotate(-15deg); }/*開発者ストーリー*/
+.bar2 { transform: translate(250px, -10px) rotate(-15deg); }/*市場*/
+.bar3 { transform: translate(225px, 40px) rotate(15deg); }/*マルチモーダル*/
+.bar4 { transform: translate(145px, 120px) rotate(25deg); }/*La Cause*/
+.bar5 { transform: translate(120px, -160px) rotate(-30deg); }/*採用情報*/
+.bar6 { transform: translate(-180px, -150px) rotate(40deg); }/*今の日本地図*/
+.bar7 { transform: translate(-150px, -40px) rotate(180deg); }/*会社概要*/
+.bar8 { transform: translate(-105px, 60px) rotate(180deg); }/*お問い合わせ*/
+.bar9 { transform: translate(-120px, 150px) rotate(-10deg); }/*secret*/
+.bar10 { transform: translate(-10px, 255px) rotate(-60deg); }/*プレスリリース*/
+.bar11 { transform: translate(-75px, -225px) rotate(50deg); }/*Oliveとは*/
+
 header, footer {
   position: relative; /* 他の要素と同様に relative を設定 */
   z-index: 1; /* circle-container より低い z-index を設定 */
@@ -142,3 +198,4 @@ header, footer {
     transform: translate(-50%, -50%) scale(1); /* 最終状態は通常サイズ */
   }
 }
+
