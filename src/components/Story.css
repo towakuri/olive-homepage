@@ -17,51 +17,30 @@
   list-style-type: none; /* リストのスタイルをなしに */
 }
 
-.story-list li:nth-child(1) {
-  margin-bottom: 20px; /* 各リスト項目の下に余白 */
-  line-height: 1.6; /* 行間を広げる */
-  font-size: 16px; /* フォントサイズ */
-  color: #000; /* テキストの色 */
-  text-align: left; /* 左揃え */
-  width: 600px;
-  background-color: #3d8ecc86;
+.story-list li:nth-child(-n+3) {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #000;
+  text-align: left;
+  position: relative;
   border-radius: 10px;
   border-width: 1px;
   border-color: #000;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   padding: 10px;
+  width: 600px;
+}
+
+.story-list li:nth-child(1) {
+  background-color: #3d8ecc86;
 }
 
 .story-list li:nth-child(2) {
-  margin-bottom: 20px; /* 各リスト項目の下に余白 */
-  line-height: 1.6; /* 行間を広げる */
-  font-size: 16px; /* フォントサイズ */
-  color: #000; /* テキストの色 */
-  text-align: left;
-  width: 600px;
-  position: relative; /* 位置を相対的に変更 */
-  left: 250px;
   background-color: #febd6986;
-  border-radius: 10px;
-  border-width: 1px;
-  border-color: #000;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px;
 }
 
 .story-list li:nth-child(3) {
-  margin-bottom: 15px; /* 各リスト項目の下に余白 */
-  line-height: 1.6; /* 行間を広げる */
-  font-size: 16px; /* フォントサイズ */
-  color: #000; /* テキストの色 */
-  text-align: left; /* 右揃え */
-  width: 50%;
-  position: relative; /* 位置を相対的に変更 */
-  left: 500px; 
   background-color: #9ed79986;
-  border-radius: 10px;
-  border-width: 1px;
-  border-color: #000;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  margin-bottom: 15px;
 }
