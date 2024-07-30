@@ -5,8 +5,6 @@ import PressRelease from './PressRelease';
 import Recruit from './Recruit';
 import Story from './Story';
 import Market from './Market';
-import Multimodal from './Multimodal';
-import LaCause from './LaCause';
 import JapanMap from './JapanMap';
 import CompanyProfile from './CompanyProfile';
 import Secret from './Secret';
@@ -20,8 +18,6 @@ function Information() {
   const commentTexts = {
     '開発者ストーリー': <Story />,
     '我々の取り組む市場': <Market />,
-    'マルチモーダル': <Multimodal />,
-    'La Cause': <LaCause />,
     '採用情報': <Recruit />,  
     '今の日本地図': <JapanMap />,
     '会社概要': <CompanyProfile />,
