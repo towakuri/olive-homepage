@@ -69,3 +69,8 @@ body .header .nav .navLink {
   color: #333;
   font-size: 20px;
 }
+
+.titleLink {
+  text-decoration: none;
+  color: inherit;
+}
