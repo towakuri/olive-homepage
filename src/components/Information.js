@@ -8,7 +8,6 @@ import Market from './Market';
 import JapanMap from './JapanMap';
 import CompanyProfile from './CompanyProfile';
 import Secret from './Secret';
-import AboutOlive from './AboutOlive';
 import './Information.css';
 
 function Information() {
@@ -17,14 +16,13 @@ function Information() {
 
   const commentTexts = {
     '開発者ストーリー': <Story />,
-    '我々の取り組む市場': <Market />,
+    'About Us': <Market />,
     '採用情報': <Recruit />,  
     '今の日本地図': <JapanMap />,
     '会社概要': <CompanyProfile />,
     'お問い合わせ': <Contact />,  
     'Secret': <Secret />,
     'プレスリリース': <PressRelease />,  
-    'Oliveとは': <AboutOlive />
   };
 
   useEffect(() => {
@@ -93,7 +91,7 @@ function Information() {
       <Header className={isHeaderVisible ? 'visible' : ''} />
       <div className="info-container">
         <div className="circle-container">
-          <img className="center-image" src="/town.svg" alt="Central" />
+          <img className="center-image" src="/pc.svg" alt="Central" />
           <div className="heartbeat"></div>
           {Object.keys(commentTexts).map((comment, index) => (
             <React.Fragment key={index}>

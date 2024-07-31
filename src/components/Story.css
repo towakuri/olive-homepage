@@ -8,9 +8,10 @@
   font-size: 24px;
   text-align: center;
   position: absolute;
-  top: 0;
   left: 50%;
+  top: 20px;
   transform: translateX(-50%);
+  font-weight: bold;
 }
 
 .story-list {
@@ -29,18 +30,10 @@
   border-color: #000;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  width: 600px;
-}
-
-.story-list li:nth-child(1) {
-  background-color: #3d8ecc86;
-}
-
-.story-list li:nth-child(2) {
-  background-color: #febd6986;
+  width: 700px;
+  background-color: #9ed79986;
 }
 
 .story-list li:nth-child(3) {
-  background-color: #9ed79986;
   margin-bottom: 15px;
 }

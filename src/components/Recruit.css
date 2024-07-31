@@ -26,10 +26,10 @@
 }
 
 .recruit-container h1 {
-  font-size: 28px; /* フォントサイズを大きく */
-  font-weight: bold;
+  font-size: 24px; /* フォントサイズを大きく */
   margin-bottom: 15px; /* マージンを調整 */
   color: #000; /* 色を変更 */
+  font-weight: bold;
 }
 
 .section h2 {

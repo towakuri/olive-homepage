@@ -16,9 +16,10 @@ body, html {
 
 .press-release-container h1 {
   margin-bottom: 20px;
-  font-size: 32px;
+  font-size: 24px;
   width: 100%; /* 親コンテナに合わせる */
   color: #000;
+  font-weight: bold;
 }
 
 .press-release-list {

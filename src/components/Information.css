@@ -40,18 +40,18 @@ main {
 
 .center-image {
   position: absolute;
-  width: 400px;
+  width: 150px;
   height: auto;
 }
 
 .comment {
   position: absolute;
-  width: 100px;
-  text-align: center;
+  width: auto; /* 幅を自動に設定 */
+  text-align: left; /* すべてのコメントを左揃えに */
   cursor: pointer;
   white-space: nowrap;
   font-size: 20px;
-  padding-left: 40px; /* アイコンのためのスペースを増やす */
+  padding-left: 40px;
 }
 
 .comment::before {
@@ -66,62 +66,40 @@ main {
 }
 
 .comment1::before { content: '\f121'; } /* 開発者ストーリー */
-.comment2::before { content: '\f54e'; } /* 市場 */
-.comment3::before { content: '\f3cf'; } /* マルチモーダル */
-.comment4::before { content: '\f21e'; } /* LaCause */
-.comment5::before { content: '\f002'; } /* 採用情報 */
-.comment6::before { content: '\f279'; } /* 今の日本地図 */
-.comment7::before { content: '\f1ad'; } /* 会社概要 */
-.comment8::before { content: '\f0e0'; } /* お問い合わせ */
-.comment9::before { content: '\f023'; } /* secret*/
-.comment10::before { content: '\f1ea'; } /* プレスリリース */
-.comment11::before { content: '\f0c0'; } /* Oliveとは */
+.comment2::before { content: '\f54e'; } /* about us */
+.comment3::before { content: '\f002'; } /* 採用情報 */
+.comment4::before { content: '\f279'; } /* map*/
+.comment5::before { content: '\f1ad'; } /* company */
+.comment6::before { content: '\f0e0'; } /* お問い合わせ */
+.comment7::before { content: '\f023'; } /* secret*/
+.comment8::before { content: '\f1ea'; } /* pressrelease */
 
 
 .comment1 {
-  transform: translate(300px, -130px);/*開発者ストーリー*/
-  text-align: left;
+  transform: translate(265px, -150px); /* story */
 }
 .comment2 {
-  transform: translate(350px, -40px);/*市場*/
-  text-align: left;
+  transform: translate(280px, 0px); /* about us */
 }
 .comment3 {
-  transform: translate(325px, 65px);/*マルチモーダル*/
-  text-align: left;
+  transform: translate(220px, 150px); /* recruit */
 }
 .comment4 {
-  transform: translate(245px, 170px);/*La Cause*/
-  text-align: left;
+  transform: translate(0px, 220px); /* map */
 }
 .comment5 {
-  transform: translate(200px, -220px);/*採用情報*/
-  text-align: left;
+  transform: translate(0px, -220px); /* company */
 }
 .comment6 {
-  transform: translate(-345px, -160px);/*今の日本地図*/
-  text-align: left;
+  transform: translate(-220px, -145px); /* contact */
 }
 .comment7 {
-  transform: translate(-380px, -40px);/*会社概要*/
-  text-align: left;
+  transform: translate(-250px, 0px); /* secret */
 }
 .comment8 {
-  transform: translate(-370px, 60px);/*お問い合わせ*/
-  text-align: left;
+  transform: translate(-230px, 150px); /* pressrelease */
 }
-.comment9 {
-  transform: translate(-240px, 150px);/*secret*/
-  text-align: left;
-}
-.comment10 {
-  transform: translate(-190px, 270px);/*プレスリリース*/
-  text-align: left;
-}
-.comment11 {
-  transform: translate(-100px, -245px);/*Oloveとは*/
-  text-align: left;
-}
+
 
 .center-text {
   position: absolute; /* 親要素に対して絶対位置を設定します。これは他の要素に対して自由に配置するために使用します。 */
@@ -169,20 +147,19 @@ main {
   width: 100px;
   height: 2px;
   background-color: #000;
+  top: 50%;
+  left: 54%;
   transform-origin: left center;
 }
 
-.bar1 { transform: translate(188px, -100px) rotate(-15deg); }/*開発者ストーリー*/
-.bar2 { transform: translate(250px, -10px) rotate(-15deg); }/*市場*/
-.bar3 { transform: translate(225px, 40px) rotate(15deg); }/*マルチモーダル*/
-.bar4 { transform: translate(145px, 120px) rotate(25deg); }/*La Cause*/
-.bar5 { transform: translate(120px, -160px) rotate(-30deg); }/*採用情報*/
-.bar6 { transform: translate(-180px, -150px) rotate(40deg); }/*今の日本地図*/
-.bar7 { transform: translate(-150px, -40px) rotate(180deg); }/*会社概要*/
-.bar8 { transform: translate(-105px, 60px) rotate(180deg); }/*お問い合わせ*/
-.bar9 { transform: translate(-120px, 150px) rotate(-10deg); }/*secret*/
-.bar10 { transform: translate(-10px, 255px) rotate(-60deg); }/*プレスリリース*/
-.bar11 { transform: translate(-75px, -225px) rotate(50deg); }/*Oliveとは*/
+.bar1 { transform: translate(-52%, -50%) rotate(0deg) translateX(100px); }
+.bar2 { transform: translate(-52%, -50%) rotate(45deg) translateX(100px); }
+.bar3 { transform: translate(-52%, -50%) rotate(90deg) translateX(100px); }
+.bar4 { transform: translate(-52%, -50%) rotate(135deg) translateX(100px); }
+.bar5 { transform: translate(-52%, -50%) rotate(180deg) translateX(100px); }
+.bar6 { transform: translate(-52%, -50%) rotate(225deg) translateX(100px); }
+.bar7 { transform: translate(-52%, -50%) rotate(270deg) translateX(100px); }
+.bar8 { transform: translate(-52%, -50%) rotate(315deg) translateX(100px); }
 
 header, footer {
   position: relative; /* 他の要素と同様に relative を設定 */
